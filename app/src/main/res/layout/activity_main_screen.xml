@@ -4,6 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondoapp"
     tools:context=".vistas.MainScreen">
+
+    <TextView
+        android:id="@+id/txtTituloApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:text="MarketPlace"
+        android:textSize="48sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btSingIn"
+        android:layout_width="160dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="124dp"
+        android:backgroundTint="@color/black"
+        android:text="Sign in"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloApp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="160dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/black"
+        android:text="Log In"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btSingIn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
