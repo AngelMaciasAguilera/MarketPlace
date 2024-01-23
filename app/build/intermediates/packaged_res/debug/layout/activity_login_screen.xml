@@ -69,16 +69,15 @@
 
     <EditText
         android:id="@+id/edtLoginPassword"
-        android:layout_width="318dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="68dp"
+        android:layout_width="313dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="Introduce tu contraseña"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:textColor="@color/black"
-        android:textColorHint="@color/material_dynamic_neutral40"
+        android:textColorHint="@color/material_dynamic_neutral_variant40"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtLoginEmail" />
 
