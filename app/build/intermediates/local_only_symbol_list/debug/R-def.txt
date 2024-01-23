@@ -35,6 +35,7 @@ id edtPassword
 id edtPasswordConfirm
 id ftbtAniadirProducto
 id imgvwProducto
+id textView
 id txtTituloApp
 id txtTituloApp2
 id txtTituloApp3

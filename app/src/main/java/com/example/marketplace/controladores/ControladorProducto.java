@@ -24,8 +24,8 @@ public class ControladorProducto {
         myRef = firebaseDatabase.getReference("Usuarios").child(email);
     }
 
-    public void insertarContenidoFoto(@NonNull Producto producto) {
-        myRef.child(producto.getId()).setValue(producto);
+    public void insertarProducto(@NonNull Producto producto) {
+        myRef.child("Producto: "+producto.getId()).setValue(producto);
     }
 
 }

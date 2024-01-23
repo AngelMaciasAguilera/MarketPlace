@@ -34,39 +34,48 @@ public class ControladorImagenProducto {
     public static final int NUEVA_IMAGEN = 1;
 
     public ControladorImagenProducto() {
-        myRef = FirebaseDatabase.getInstance().getReference();
-        storage = FirebaseStorage.getInstance();
         auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+        storage = FirebaseStorage.getInstance();
         storageRef = storage.getReference();
     }
 
-    public void insertarImagen(ImageView imagenProducto, String idProducto,String nombreProducto){
-        //-------------------------convierto el imgvwProducto a Bitmap----------------------------------
-        imagenProducto.setDrawingCacheEnabled(true);
-        imagenProducto.buildDrawingCache();
-        Bitmap bitmap = ((BitmapDrawable) imagenProducto.getDrawable()).getBitmap();
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 50, baos);
-        byte[] data = baos.toByteArray();
-        StorageReference imgFotoRef = storageRef.child(user.getEmail()+"/"+idProducto+"/"+ nombreProducto+".png");
-        UploadTask uploadTask = imgFotoRef.putBytes(data);
-        uploadTask.addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception exception) {
-                // Handle unsuccessful uploads
-                Log.i("firebase1","la foto no se ha subido correctamente");
+    public void insertarImagen(ImageView imagenProducto, String idProducto, String nombreProducto) {
+        if (user != null) {
+            //-------------------------convierto el imgvwProducto a Bitmap----------------------------------
+            imagenProducto.setDrawingCacheEnabled(true);
+            imagenProducto.buildDrawingCache();
+            Bitmap bitmap = ((BitmapDrawable) imagenProducto.getDrawable()).getBitmap();
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 50, baos);
+            byte[] data = baos.toByteArray();
 
-            }
-        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                // taskSnapshot.getMetadata() contains file metadata such as size, content-type, etc.
-                Log.i("firebase1","la foto se ha subido correctamente");
-                // ...
-            }
-        });
+            String email = user.getEmail();
+            if (email != null) {
+                email = email.replace(".", "_");
+                StorageReference imgFotoRef = storageRef.child(email + "/" + idProducto + "/" + nombreProducto + ".png");
+                UploadTask uploadTask = imgFotoRef.putBytes(data);
 
+                uploadTask.addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        // Handle unsuccessful uploads
+                        Log.i("firebase1", "la foto no se ha subido correctamente");
+                    }
+                }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        // taskSnapshot.getMetadata() contains file metadata such as size, content-type, etc.
+                        Log.i("firebase1", "la foto se ha subido correctamente");
+                        // ...
+                    }
+                });
+            }
+        } else {
+            Log.e("firebase1", "El usuario es nulo en insertarImagen");
+        }
     }
+
     public void descargarImagen(String idProducto,String nombreProducto,ImageView imagenDescargada){
         StorageReference islandRef = storageRef.child(user.getEmail()+"/"+idProducto+"/"+ nombreProducto+".png");
 

@@ -145,6 +145,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="196dp"
         android:backgroundTint="@color/black"
+        android:onClick="cambiarImagen"
         android:text="Add Image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imgvwProducto" />

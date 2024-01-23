@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/black"
         android:onClick="addProduct"
         android:text="Add Product"
@@ -131,9 +131,9 @@
         android:id="@+id/imgvwProducto"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.336"
+        app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TV_Id5"
         app:srcCompat="@drawable/defaultimage" />
@@ -145,6 +145,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="196dp"
         android:backgroundTint="@color/black"
+        android:onClick="cambiarImagen"
         android:text="Add Image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imgvwProducto" />
