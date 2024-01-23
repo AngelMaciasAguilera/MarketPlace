@@ -2989,6 +2989,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable adicionbt
 drawable avd_hide_password
 drawable avd_show_password
 drawable btn_checkbox_checked_mtrl
@@ -3018,6 +3019,7 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable defaultimage
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3040,6 +3042,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
+drawable imagenf
 drawable imgerror
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3130,6 +3133,10 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
+id TV_Id
+id TV_Id2
+id TV_Id3
+id TV_Id5
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -3221,8 +3228,12 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btAdd
+id btAddImage
+id btBackAdition
 id btCancel
 id btCancelLogin
+id btCerrarSesion
 id btLogIn
 id btSingConfirm
 id btSingIn
@@ -3302,6 +3313,9 @@ id easeOut
 id east
 id edge
 id edit_query
+id edtAddId
+id edtAddNombre
+id edtAddPrecio
 id edtEmail
 id edtLoginEmail
 id edtLoginPassword
@@ -3333,6 +3347,7 @@ id floating
 id forever
 id fragment_container_view_tag
 id frost
+id ftbtAniadirProducto
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
@@ -3355,6 +3370,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imgvwProducto
 id immediateStop
 id included
 id indeterminate
@@ -3751,6 +3767,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_adition_screen
 layout activity_login_screen
 layout activity_main_screen
 layout activity_main_screen_app

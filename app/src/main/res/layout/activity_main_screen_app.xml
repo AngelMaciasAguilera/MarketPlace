@@ -14,6 +14,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/black"
+        android:onClick="signOut"
         android:text="Cerrar Sesion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,6 +26,7 @@
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="44dp"
         android:clickable="true"
+        android:onClick="goToAdd"
         app:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

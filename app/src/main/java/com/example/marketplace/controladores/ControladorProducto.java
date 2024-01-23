@@ -9,18 +9,24 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class ControladorProducto {
+    private String email;
     private DatabaseReference myRef;
     private FirebaseDatabase firebaseDatabase;
     private FirebaseUser user;
     private FirebaseAuth auth;
+
     public ControladorProducto() {
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        myRef = firebaseDatabase.getReference("Usuarios").child(user.getEmail());
         auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        email = user.getEmail();
+        email = email.replace(".","_");
+        myRef = firebaseDatabase.getReference("Usuarios").child(email);
     }
 
-    public void insertarContenidoFoto(@NonNull Producto producto){
+    public void insertarContenidoFoto(@NonNull Producto producto) {
         myRef.child(producto.getId()).setValue(producto);
     }
 
 }
+

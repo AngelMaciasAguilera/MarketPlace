@@ -14,6 +14,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/black"
+        android:onClick="cancelAdition"
         android:text="Cancel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,8 +24,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/black"
+        android:onClick="addProduct"
         android:text="Add Product"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -90,6 +92,7 @@
         android:hint="Introduzca el identificador"
         android:inputType="text"
         android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/TV_Id"
@@ -104,6 +107,7 @@
         android:hint="Introduzca el nombre"
         android:inputType="text"
         android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.764"
         app:layout_constraintStart_toEndOf="@+id/TV_Id3"
@@ -119,16 +123,17 @@
         android:hint="Introduzca el precio"
         android:inputType="numberDecimal"
         android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray"
         app:layout_constraintStart_toEndOf="@+id/TV_Id2"
         app:layout_constraintTop_toBottomOf="@+id/edtAddNombre" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgvwProducto"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.336"
+        app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TV_Id5"
         app:srcCompat="@drawable/defaultimage" />
@@ -142,5 +147,5 @@
         android:backgroundTint="@color/black"
         android:text="Add Image"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView" />
+        app:layout_constraintStart_toEndOf="@+id/imgvwProducto" />
 </androidx.constraintlayout.widget.ConstraintLayout>

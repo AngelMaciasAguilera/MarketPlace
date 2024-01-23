@@ -41,7 +41,7 @@ public class ControladorImagenProducto {
     }
 
     public void insertarImagen(ImageView imagenProducto, String idProducto,String nombreProducto){
-        //-------------------------convierto el imageView a Bitmap----------------------------------
+        //-------------------------convierto el imgvwProducto a Bitmap----------------------------------
         imagenProducto.setDrawingCacheEnabled(true);
         imagenProducto.buildDrawingCache();
         Bitmap bitmap = ((BitmapDrawable) imagenProducto.getDrawable()).getBitmap();

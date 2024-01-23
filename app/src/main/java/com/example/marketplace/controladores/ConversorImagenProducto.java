@@ -47,7 +47,7 @@ public class ConversorImagenProducto {
     }
 
     // la forma de utilizarlo sería:
-    // imageView.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.id.myimage, 100, 100));
+    // imgvwProducto.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.id.myimage, 100, 100));
     // mas información aquí: -> https://developer.android.com/topic/performance/graphics/load-bitmap#java
 
 
