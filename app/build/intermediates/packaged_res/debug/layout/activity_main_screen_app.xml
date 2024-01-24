@@ -16,21 +16,54 @@
         android:backgroundTint="@color/black"
         android:onClick="signOut"
         android:text="Cerrar Sesion"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/sv_Buscador"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/black"
+        app:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btCerrarSesion" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/ftbtAniadirProducto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/white"
         android:clickable="true"
         android:onClick="goToAdd"
-        app:backgroundTint="@color/white"
+        app:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/adicionbt"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_Productos"
+        android:layout_width="wrap_content"
+        android:layout_height="615dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="60dp"
+        android:foregroundGravity="center_horizontal"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintBottom_toTopOf="@+id/ftbtAniadirProducto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sv_Buscador"
+        app:layout_constraintVertical_bias="0.395" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

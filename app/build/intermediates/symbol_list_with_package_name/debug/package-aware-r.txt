@@ -3026,6 +3026,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable fondoapp
+drawable fondoitemrv
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_arrow_back_black_24
@@ -3370,6 +3371,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imgrvProducto
 id imgvwProducto
 id immediateStop
 id included
@@ -3464,6 +3466,7 @@ id neverCompleteToEnd
 id neverCompleteToStart
 id noScroll
 id noState
+id nombreProducto
 id none
 id normal
 id north
@@ -3504,6 +3507,7 @@ id percent
 id pin
 id position
 id postLayout
+id precioProducto
 id pressed
 id progress_circular
 id progress_horizontal
@@ -3518,6 +3522,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id rv_Productos
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3579,6 +3584,7 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
+id sv_Buscador
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -3791,6 +3797,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout item_rv_producto
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

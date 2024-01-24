@@ -7,6 +7,12 @@ public class Producto implements Serializable {
     private String id,nombre;
     private Double precio;
 
+    public Producto() {
+        this.id = "idPredeterminado";
+        this.nombre = "nombre del producto";
+        this.precio = 0.0;
+    }
+
     public Producto(String id, String nombre, Double precio) {
         this.id = id;
         this.nombre = nombre;

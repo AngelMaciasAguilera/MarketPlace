@@ -40,10 +40,6 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-main-41:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "com.example.marketplace.app-merged_res-39:/layout_activity_main_screen.xml.flat",
-        "source": "com.example.marketplace.app-main-41:/layout/activity_main_screen.xml"
-    },
-    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-merged_res-39:\\drawable_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-main-41:\\drawable\\ic_launcher_foreground.xml"
     },
@@ -64,6 +60,10 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-main-41:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-merged_res-39:\\layout_item_rv_producto.xml.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-main-41:\\layout\\item_rv_producto.xml"
+    },
+    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-merged_res-39:\\mipmap-anydpi_ic_launcher.xml.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-main-41:\\mipmap-anydpi\\ic_launcher.xml"
     },
@@ -78,6 +78,10 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-merged_res-39:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-main-41:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.marketplace.app-merged_res-39:/layout_activity_main_screen_app.xml.flat",
+        "source": "com.example.marketplace.app-main-41:/layout/activity_main_screen_app.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-merged_res-39:\\mipmap-mdpi_ic_launcher.webp.flat",
@@ -102,6 +106,10 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-merged_res-39:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-main-41:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-merged_res-39:\\drawable_fondoitemrv.png.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-main-41:\\drawable\\fondoitemrv.png"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-merged_res-39:\\layout_activity_adition_screen.xml.flat",

@@ -5,6 +5,7 @@ color white
 drawable adicionbt
 drawable defaultimage
 drawable fondoapp
+drawable fondoitemrv
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable imagenf
@@ -34,7 +35,12 @@ id edtNombre
 id edtPassword
 id edtPasswordConfirm
 id ftbtAniadirProducto
+id imgrvProducto
 id imgvwProducto
+id nombreProducto
+id precioProducto
+id rv_Productos
+id sv_Buscador
 id textView
 id txtTituloApp
 id txtTituloApp2
@@ -44,6 +50,7 @@ layout activity_login_screen
 layout activity_main_screen
 layout activity_main_screen_app
 layout activity_sing_in_screen
+layout item_rv_producto
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name

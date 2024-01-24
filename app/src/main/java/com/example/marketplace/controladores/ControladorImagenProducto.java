@@ -31,6 +31,8 @@ public class ControladorImagenProducto {
     private FirebaseAuth auth;
     private StorageReference storageRef;
 
+    private String email;
+
     public static final int NUEVA_IMAGEN = 1;
 
     public ControladorImagenProducto() {
@@ -38,6 +40,8 @@ public class ControladorImagenProducto {
         user = auth.getCurrentUser();
         storage = FirebaseStorage.getInstance();
         storageRef = storage.getReference();
+        email = user.getEmail();
+        email = email.replace(".", "_");
     }
 
     public void insertarImagen(ImageView imagenProducto, String idProducto, String nombreProducto) {
@@ -49,10 +53,7 @@ public class ControladorImagenProducto {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             bitmap.compress(Bitmap.CompressFormat.JPEG, 50, baos);
             byte[] data = baos.toByteArray();
-
-            String email = user.getEmail();
             if (email != null) {
-                email = email.replace(".", "_");
                 StorageReference imgFotoRef = storageRef.child(email + "/" + idProducto + "/" + nombreProducto + ".png");
                 UploadTask uploadTask = imgFotoRef.putBytes(data);
 
@@ -77,7 +78,7 @@ public class ControladorImagenProducto {
     }
 
     public void descargarImagen(String idProducto,String nombreProducto,ImageView imagenDescargada){
-        StorageReference islandRef = storageRef.child(user.getEmail()+"/"+idProducto+"/"+ nombreProducto+".png");
+        StorageReference islandRef = storageRef.child(email+"/"+idProducto+"/"+ nombreProducto+".png");
 
         final long tam_foto = 10240 * 1024;
         islandRef.getBytes(tam_foto).addOnSuccessListener(new OnSuccessListener<byte[]>() {
@@ -98,7 +99,7 @@ public class ControladorImagenProducto {
                 String errorMessage = exception.getMessage();
                 Log.i("firebase1",errorMessage);
                 Log.i("firebase1","error code" + String.valueOf(errorCode));
-                imagenDescargada.setImageResource(R.drawable.imgerror);
+                imagenDescargada.setImageResource(R.drawable.imagenf);
             }
         });
     }
