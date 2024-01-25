@@ -6,7 +6,7 @@
     android:layout_centerHorizontal="true"
     android:layout_gravity="center|top"
     android:layout_marginTop="10dp"
-    android:background="@drawable/fondoitemrv">
+    android:background="@drawable/fondo2pr">
 
     <ImageView
         android:id="@+id/imgrvProducto"

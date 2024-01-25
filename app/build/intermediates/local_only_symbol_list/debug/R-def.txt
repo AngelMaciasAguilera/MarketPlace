@@ -5,12 +5,12 @@ color white
 drawable adicionbt
 drawable buscar
 drawable defaultimage
-drawable fondoapp
-drawable fondoitemrv
+drawable fondo2pr
+drawable fondoapp1
+drawable fondoproducto
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable imagenf
-drawable imgerror
 drawable montania
 id TV_Id
 id TV_Id2

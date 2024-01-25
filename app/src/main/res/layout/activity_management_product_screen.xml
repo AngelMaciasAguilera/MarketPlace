@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vistas.ManagementProductScreen"
-    android:background="@drawable/fondoapp">
+    android:background="@drawable/fondoapp1"
+    tools:context=".vistas.ManagementProductScreen">
 
 
     <ImageView
@@ -26,9 +26,11 @@
         android:layout_height="70dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="50dp"
+        android:background="#AD000000"
         android:editable="false"
         android:enabled="false"
         android:hint="id del producto"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textColorHint="@android:color/darker_gray"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +42,9 @@
         android:layout_height="70dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="50dp"
+        android:background="#AD000000"
         android:hint="nombre del producto"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textColorHint="@android:color/darker_gray"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,9 +56,11 @@
         android:layout_height="70dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="50dp"
+        android:background="#AD000000"
         android:ems="10"
         android:hint="precio del producto"
         android:inputType="numberDecimal"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textColorHint="@android:color/darker_gray"
         app:layout_constraintStart_toStartOf="parent"
