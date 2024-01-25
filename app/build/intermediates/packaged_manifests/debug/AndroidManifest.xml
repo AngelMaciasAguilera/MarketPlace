@@ -38,6 +38,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.MarketPlace" >
         <activity
+            android:name="com.example.marketplace.vistas.ManagementProductScreen"
+            android:exported="false" />
+        <activity
             android:name="com.example.marketplace.vistas.AditionScreen"
             android:exported="false" />
         <activity

@@ -70,7 +70,7 @@ public class MainScreenApp extends AppCompatActivity {
                             ArrayList<Producto> productos = new ArrayList<Producto>();
                             for (DataSnapshot keynode : snapshot.getChildren()) {
                                 Producto a = keynode.getValue(Producto.class);
-                                if (a.getNombre().contains(textoABuscar)) {
+                                if (a.getNombre().toLowerCase().contains(textoABuscar.toLowerCase())) {
                                     productos.add(keynode.getValue(Producto.class));
                                 }
                             }
