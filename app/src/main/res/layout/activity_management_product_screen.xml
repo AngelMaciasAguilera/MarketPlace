@@ -18,7 +18,8 @@
         app:layout_constraintEnd_toStartOf="@+id/btChangeImage"
         app:layout_constraintHorizontal_bias="0.342"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
 
     <EditText
         android:id="@+id/edtM_idProducto"
@@ -29,12 +30,13 @@
         android:background="#AD000000"
         android:editable="false"
         android:enabled="false"
-        android:hint="id del producto"
+        android:hint="@string/edtUpdateProducto"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textColorHint="@android:color/darker_gray"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgMProducto" />
+        app:layout_constraintTop_toBottomOf="@+id/imgMProducto"
+        tools:ignore="Autofill,Deprecated,TextFields" />
 
     <EditText
         android:id="@+id/edtM_NombreProducto"
@@ -43,12 +45,13 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="50dp"
         android:background="#AD000000"
-        android:hint="nombre del producto"
+        android:hint="@string/edtUpdateNombreProducto"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textColorHint="@android:color/darker_gray"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtM_idProducto" />
+        app:layout_constraintTop_toBottomOf="@+id/edtM_idProducto"
+        tools:ignore="Autofill,TextFields" />
 
     <EditText
         android:id="@+id/edtM_PrecioProducto"
@@ -58,13 +61,14 @@
         android:layout_marginTop="50dp"
         android:background="#AD000000"
         android:ems="10"
-        android:hint="precio del producto"
+        android:hint="@string/edtUpdatePrecioProducto"
         android:inputType="numberDecimal"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textColorHint="@android:color/darker_gray"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtM_NombreProducto" />
+        app:layout_constraintTop_toBottomOf="@+id/edtM_NombreProducto"
+        tools:ignore="Autofill" />
 
 
     <Button
@@ -75,10 +79,11 @@
         android:layout_marginTop="50dp"
         android:backgroundTint="@color/black"
         android:onClick="deleteProduct"
-        android:text="Delete"
+        android:text="@string/btDelete"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtM_PrecioProducto" />
+        app:layout_constraintTop_toBottomOf="@id/edtM_PrecioProducto"
+        tools:ignore="RtlHardcoded" />
 
     <Button
         android:id="@+id/btManagementUpdate"
@@ -88,10 +93,11 @@
         android:layout_marginRight="30dp"
         android:backgroundTint="@color/black"
         android:onClick="updateProduct"
-        android:text="Update"
+        android:text="@string/btUpdate"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtM_PrecioProducto" />
+        app:layout_constraintTop_toBottomOf="@id/edtM_PrecioProducto"
+        tools:ignore="RtlHardcoded" />
 
     <Button
         android:id="@+id/btManagementCancelled"
@@ -101,7 +107,7 @@
         android:layout_marginTop="28dp"
         android:backgroundTint="@color/black"
         android:onClick="cancelProductManagement"
-        android:text="Cancel"
+        android:text="@string/btCancelUpdating"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -114,7 +120,7 @@
         android:layout_marginEnd="16dp"
         android:backgroundTint="@color/black"
         android:onClick="changeImage"
-        android:text="Change image"
+        android:text="@string/btChangeUpdateImage"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -1,3 +1,35 @@
 <resources>
-    <string name="app_name">EManager</string>
+    <string name="app_name">MarketPlace</string>
+    <string name="imagen_producto">imagen añadida o por añadir al producto\n</string>
+    <string name="hintAddPrecio">Introduzca el precio</string>
+    <string name="hintAddNombre">Introduzca el nombre</string>
+    <string name="hintAddId">Introduzca el identificador</string>
+    <string name="cancelAdition">Cancel</string>
+    <string name="addImage">Add Image</string>
+    <string name="addProduct">Add Product</string>
+    <string name="imgvwAddProducto">Imagen del producto</string>
+    <string name="imgvwNombreProducto">Nombre del producto</string>
+    <string name="imgvwPrecioAddProducto">Precio del producto</string>
+    <string name="imgvwIdAddProducto">Id del producto</string>
+    <string name="btSignIn">Sign in</string>
+    <string name="btLogIn">Log In</string>
+    <string name="edtUpdateProducto">id del producto</string>
+    <string name="edtUpdatePrecioProducto">precio del producto</string>
+    <string name="edtUpdateNombreProducto">nombre del producto</string>
+    <string name="btUpdate">Update</string>
+    <string name="btDelete">Delete</string>
+    <string name="btCancelUpdating">Cancel</string>
+    <string name="btChangeUpdateImage">Change image</string>
+    <string name="edtConfirmPassSI">Introduce tu contraseña de nuevo</string>
+    <string name="edtPasswordSI">Introduce una contraseña</string>
+    <string name="edtNombreSI">Introduce tu nombre</string>
+    <string name="edtEmailSI">Introduce tu email</string>
+    <string name="edtSignInSI">Sign in</string>
+    <string name="btCancelSI">Cancel</string>
+    <string name="hintLoginPassword">Introduce tu contraseña</string>
+    <string name="edtEmailLogin">Introduce tu correo</string>
+    <string name="btLogInLI">Log in</string>
+    <string name="btCancelLogin">Cancel</string>
+    <string name="edtBuscarProducto">Buscar producto</string>
+    <string name="btCerrarSesion">Cerrar Sesion</string>
 </resources>

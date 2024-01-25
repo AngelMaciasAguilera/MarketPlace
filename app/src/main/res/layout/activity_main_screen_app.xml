@@ -15,7 +15,7 @@
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/black"
         android:onClick="signOut"
-        android:text="Cerrar Sesion"
+        android:text="@string/btCerrarSesion"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -34,7 +34,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/adicionbt"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_Productos"
@@ -60,7 +60,7 @@
         android:background="@color/black"
         android:backgroundTint="@color/black"
         android:ems="10"
-        android:hint="Buscar producto"
+        android:hint="@string/edtBuscarProducto"
         android:inputType="text"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -71,6 +71,7 @@
         app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.144" />
+        app:layout_constraintVertical_bias="0.144"
+        tools:ignore="Autofill" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

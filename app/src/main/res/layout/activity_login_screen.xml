@@ -15,14 +15,15 @@
         android:backgroundTint="@color/black"
         android:drawableTint="@color/black"
         android:foregroundTint="@color/black"
-        android:text="MarketPlace"
+        android:text="@string/app_name"
         android:textColor="@color/black"
         android:textSize="48sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UseCompatTextViewDrawableXml" />
 
     <Button
         android:id="@+id/btLogIn"
@@ -32,7 +33,7 @@
         android:layout_marginBottom="184dp"
         android:backgroundTint="@color/black"
         android:onClick="entrar"
-        android:text="Log in"
+        android:text="@string/btLogInLI"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -46,7 +47,7 @@
         android:layout_marginBottom="184dp"
         android:backgroundTint="@color/black"
         android:onClick="cancelarLogueo"
-        android:text="Cancel"
+        android:text="@string/btCancelLogin"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -59,15 +60,16 @@
         android:layout_marginTop="284dp"
         android:background="#AD000000"
         android:ems="10"
-        android:hint="Introduce tu correo"
-        android:inputType="text"
+        android:hint="@string/edtEmailLogin"
+        android:inputType="textEmailAddress"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textColorHint="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill,TextFields" />
 
     <EditText
         android:id="@+id/edtLoginPassword"
@@ -76,13 +78,14 @@
         android:layout_marginTop="36dp"
         android:background="#AD000000"
         android:ems="10"
-        android:hint="Introduce tu contraseña"
+        android:hint="@string/hintLoginPassword"
         android:inputType="textPassword"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textColorHint="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtLoginEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/edtLoginEmail"
+        tools:ignore="Autofill" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,14 +15,15 @@
         android:backgroundTint="@color/black"
         android:drawableTint="@color/black"
         android:foregroundTint="@color/black"
-        android:text="MarketPlace"
+        android:text="@string/app_name"
         android:textColor="@color/black"
         android:textSize="48sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UseCompatTextViewDrawableXml" />
 
     <EditText
         android:id="@+id/edtNombre"
@@ -31,7 +32,7 @@
         android:layout_marginBottom="20dp"
         android:background="#AD000000"
         android:ems="10"
-        android:hint="Introduce tu nombre"
+        android:hint="@string/edtNombreSI"
         android:inputType="text"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -39,7 +40,8 @@
         app:layout_constraintBottom_toTopOf="@+id/edtEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/edtPassword"
@@ -48,7 +50,7 @@
         android:layout_marginTop="40dp"
         android:background="#AD000000"
         android:ems="10"
-        android:hint="Introduce una contraseña"
+        android:hint="@string/edtPasswordSI"
         android:inputType="textPassword"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -56,7 +58,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/edtEmail"
+        tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/edtEmail"
@@ -65,7 +68,7 @@
         android:layout_marginTop="316dp"
         android:background="#AD000000"
         android:ems="10"
-        android:hint="Introduce tu email"
+        android:hint="@string/edtEmailSI"
         android:inputType="textEmailAddress"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -73,7 +76,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/edtPasswordConfirm"
@@ -82,7 +86,7 @@
         android:layout_marginTop="48dp"
         android:background="#AD000000"
         android:ems="10"
-        android:hint="Introduce tu contraseña de nuevo"
+        android:hint="@string/edtConfirmPassSI"
         android:inputType="textPassword"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -90,7 +94,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword"
+        tools:ignore="Autofill" />
 
     <Button
         android:id="@+id/btSingConfirm"
@@ -100,7 +105,7 @@
         android:layout_marginBottom="48dp"
         android:backgroundTint="@color/black"
         android:onClick="registrarUsuario"
-        android:text="Sign in"
+        android:text="@string/edtSignInSI"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -114,7 +119,7 @@
         android:layout_marginBottom="48dp"
         android:backgroundTint="@color/black"
         android:onClick="cancelar"
-        android:text="Cancel"
+        android:text="@string/btCancelSI"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"

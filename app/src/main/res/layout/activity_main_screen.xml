@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="168dp"
-        android:text="MarketPlace"
+        android:text="@string/app_name"
         android:textColor="@color/black"
         android:textSize="48sp"
         android:textStyle="bold|italic"
@@ -29,7 +29,7 @@
         android:layout_marginEnd="124dp"
         android:backgroundTint="@color/black"
         android:onClick="signinScreen"
-        android:text="Sign in"
+        android:text="@string/btSignIn"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +43,7 @@
         android:layout_marginTop="96dp"
         android:backgroundTint="@color/black"
         android:onClick="loginScreen"
-        android:text="Log In"
+        android:text="@string/btLogIn"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,6 +61,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTituloApp" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloApp"
+        tools:ignore="HardcodedText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
