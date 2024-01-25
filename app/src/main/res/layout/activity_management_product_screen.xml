@@ -31,7 +31,7 @@
         android:enabled="false"
         android:hint="id del producto"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textColorHint="@android:color/darker_gray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgMProducto" />
@@ -45,7 +45,7 @@
         android:background="#AD000000"
         android:hint="nombre del producto"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textColorHint="@android:color/darker_gray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtM_idProducto" />
@@ -61,7 +61,7 @@
         android:hint="precio del producto"
         android:inputType="numberDecimal"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textColorHint="@android:color/darker_gray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtM_NombreProducto" />
