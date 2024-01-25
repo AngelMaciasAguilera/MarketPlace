@@ -22,10 +22,11 @@ import com.example.marketplace.controladores.ControladorProducto;
 import com.example.marketplace.modelos.Producto;
 
 public class AditionScreen extends AppCompatActivity {
-    private EditText edtIdProducto,edtNombreProducto,edtPrecioProducto;
+    private EditText edtIdProducto, edtNombreProducto, edtPrecioProducto;
     private ImageView imgvwProducto;
     private ControladorProducto contrlProducto;
     private ControladorImagenProducto contrlImagenProducto;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,19 +40,21 @@ public class AditionScreen extends AppCompatActivity {
 
     }
 
-    public void cancelAdition(View view){
+    public void cancelAdition(View view) {
         Intent intent = new Intent(this, MainScreenApp.class);
         this.startActivity(intent);
     }
 
-    public void addProduct(View view){
-        String idProducto = String.valueOf(edtIdProducto.getText());
-        String nombreProducto = String.valueOf(edtNombreProducto.getText());
-        double precio = Double.parseDouble(String.valueOf(edtPrecioProducto.getText()));
-        Producto producto = new Producto(idProducto,nombreProducto,precio);
-        contrlProducto.insertarProducto(producto);
-        contrlImagenProducto.insertarImagen(imgvwProducto,idProducto,nombreProducto);
-        limpiarCampos();
+    public void addProduct(View view) {
+        if (comprobarCampos()) {
+            String idProducto = String.valueOf(edtIdProducto.getText());
+            String nombreProducto = String.valueOf(edtNombreProducto.getText());
+            double precio = Double.parseDouble(String.valueOf(edtPrecioProducto.getText()));
+            Producto producto = new Producto(idProducto, nombreProducto, precio);
+            contrlProducto.insertarProducto(producto);
+            contrlImagenProducto.insertarImagen(imgvwProducto, idProducto, nombreProducto);
+            limpiarCampos();
+        }
 
     }
 
@@ -63,11 +66,23 @@ public class AditionScreen extends AppCompatActivity {
         pickIntent.setType("image/*");
 
         Intent chooserIntent = Intent.createChooser(getIntent, "Selecciona una imagen");
-        chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, new Intent[] {pickIntent});
+        chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, new Intent[]{pickIntent});
         startActivityForResult(chooserIntent, NUEVA_IMAGEN);
     }
 
-    private void limpiarCampos(){
+    private boolean comprobarCampos() {
+        boolean camposCorrectos = true;
+        String addIdProducto = String.valueOf(edtIdProducto.getText());
+        String addNombreProducto = String.valueOf(edtNombreProducto.getText());
+        String addPrecioProducto = String.valueOf(edtPrecioProducto.getText());
+        if (addIdProducto.isEmpty() || addNombreProducto.isEmpty() || addPrecioProducto.isEmpty()) {
+            camposCorrectos = false;
+            Toast.makeText(this, "Debes rellenar todos los campos para insertar un producto", Toast.LENGTH_LONG).show();
+        }
+        return camposCorrectos;
+    }
+
+    private void limpiarCampos() {
         edtIdProducto.getText().clear();
         edtNombreProducto.getText().clear();
         edtPrecioProducto.getText().clear();
@@ -89,7 +104,7 @@ public class AditionScreen extends AppCompatActivity {
                 //---------------------------------------------
 
             } catch (Exception e) {
-                Toast.makeText(this,e.getMessage(),Toast.LENGTH_LONG).show();
+                Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
                 imgvwProducto.setImageResource(R.drawable.imagenf);
             }
         }

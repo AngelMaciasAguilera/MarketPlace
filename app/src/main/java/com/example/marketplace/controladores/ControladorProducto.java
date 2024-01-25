@@ -8,6 +8,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class ControladorProducto {
     private String email;
     private DatabaseReference myRef;
@@ -26,6 +29,15 @@ public class ControladorProducto {
 
     public void insertarProducto(@NonNull Producto producto) {
         myRef.child("Producto: "+producto.getId()).setValue(producto);
+    }
+
+    public void eliminarProducto(String idProducto){
+        myRef.child("Producto: "+idProducto).removeValue();
+    }
+
+    public void actualizarProducto(Producto p){
+        eliminarProducto(p.getId());
+        insertarProducto(p);
     }
 
 }

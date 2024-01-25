@@ -1,7 +1,7 @@
 package com.example.marketplace.vistas;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,8 +9,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 
 import com.example.marketplace.R;
 import com.example.marketplace.modelos.Producto;
@@ -25,15 +28,16 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class MainScreenApp extends AppCompatActivity implements  SearchView.OnQueryTextListener{
+public class MainScreenApp extends AppCompatActivity {
     private FirebaseDatabase database;
     private ArrayList<Producto> productos;
     private FirebaseUser user;
     private FirebaseAuth auth;
     private FotosProductosAdapter adapter;
     private RecyclerView rv_productos;
-    private SearchView sv_Buscador;
     private DatabaseReference myRefProductos;
+    private EditText edtBuscarProducto;
+    private String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +45,74 @@ public class MainScreenApp extends AppCompatActivity implements  SearchView.OnQu
         setContentView(R.layout.activity_main_screen_app);
         database = FirebaseDatabase.getInstance();
         rv_productos = (RecyclerView) findViewById(R.id.rv_Productos);
-        sv_Buscador = (SearchView) findViewById(R.id.sv_Buscador);
 
         productos = new ArrayList<Producto>();
+
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
-        String email = user.getEmail().replace(".","_");
+        email = user.getEmail().replace(".", "_");
+        rellenarRecyclerView();
+        edtBuscarProducto = (EditText) findViewById(R.id.edtBuscarProducto);
+        edtBuscarProducto.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String textoABuscar = String.valueOf(edtBuscarProducto.getText());
+                if (textoABuscar.isEmpty()){
+                    rellenarRecyclerView();
+                }else{
+                    myRefProductos = database.getReference("Usuarios").child(email);
+                    myRefProductos.addValueEventListener(new ValueEventListener() {
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            ArrayList<Producto> productos = new ArrayList<Producto>();
+                            for (DataSnapshot keynode : snapshot.getChildren()) {
+                                Producto a = keynode.getValue(Producto.class);
+                                if (a.getNombre().contains(textoABuscar)) {
+                                    productos.add(keynode.getValue(Producto.class));
+                                }
+                            }
+                            adapter.setProductos(productos);
+                            adapter.notifyDataSetChanged();
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError error) {
+                            // Failed to read value
+                            Log.i("firebase1", String.valueOf(error.toException()));
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
 //-----------------------------------------------------------
+
+    }
+
+    public void signOut(View view) {
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        mAuth.signOut();
+        Intent intent = new Intent(this, MainScreen.class);
+        this.startActivity(intent);
+        finish();
+
+    }
+
+    public void goToAdd(View view) {
+        Intent intent = new Intent(this, AditionScreen.class);
+        this.startActivity(intent);
+
+    }
+
+    //---------------------------------------------------------------------------------
+    public void rellenarRecyclerView() {
         adapter = new FotosProductosAdapter(this, productos);
         rv_productos.setAdapter(adapter);
         myRefProductos = database.getReference("Usuarios").child(email);
@@ -60,7 +125,7 @@ public class MainScreenApp extends AppCompatActivity implements  SearchView.OnQu
                     Producto a = (Producto) dataSnapshot.getValue(Producto.class);
                     productos.add(a);
                 }
-                adapter.setProductosOld(productos);
+                adapter.setProductos(productos);
                 adapter.notifyDataSetChanged();
             }
 
@@ -81,33 +146,7 @@ public class MainScreenApp extends AppCompatActivity implements  SearchView.OnQu
             rv_productos.setLayoutManager(new LinearLayoutManager(this));
         }
 
-        sv_Buscador.setOnQueryTextListener(this);
 
     }
 
-    public void signOut(View view) {
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();
-        mAuth.signOut();
-        Intent intent = new Intent(this, MainScreen.class);
-        this.startActivity(intent);
-        finish();
-
-    }
-
-    public void goToAdd(View view) {
-        Intent intent = new Intent(this, AditionScreen.class);
-        this.startActivity(intent);
-
-    }
-
-
-    @Override
-    public boolean onQueryTextSubmit(String query) {
-        return false;
-    }
-
-    @Override
-    public boolean onQueryTextChange(String newText) {
-        return false;
-    }
 }

@@ -13,10 +13,12 @@ import com.example.marketplace.R;
 import com.example.marketplace.controladores.ConversorImagenProducto;
 import com.example.marketplace.modelos.Producto;
 import com.example.marketplace.vistas.MainScreen;
+import com.example.marketplace.vistas.MainScreenApp;
+import com.example.marketplace.vistas.ManagementProductScreen;
 
 public class RvProductosHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-    public static final String EXTRA_DETALLES_PRODUCTO = "es.com.example.marketplace.vistas.MainScreenApp.producto";
-    public static final String EXTRA_IMAGEN2_PRODUCTO = "es.com.example.marketplace.vistas.MainScreenApp.imagen";
+    public static final String EXTRA_DETALLES_PRODUCTO = "es.com.example.marketplace.vistas.ManagementProductScreen.producto";
+    public static final String EXTRA_IMAGEN2_PRODUCTO = "es.com.example.marketplace.vistas.ManagementProductScreen.imagen";
     private TextView tvwNombreProducto;
     private TextView tvwPrecioProducto;
 
@@ -67,14 +69,17 @@ public class RvProductosHolder extends RecyclerView.ViewHolder implements View.O
     @Override
     public void onClick(View view) {
         int posicion = getLayoutPosition();
-        Producto p = fpa.getProductosOld().get(posicion);
-        Intent intent = new Intent(fpa.getContexto(), MainScreen.class);
+        Producto p = fpa.getProductos().get(posicion);
+        Intent intent = new Intent(fpa.getContexto(), ManagementProductScreen.class);
         intent.putExtra(EXTRA_DETALLES_PRODUCTO,p);
         imgrvProducto.buildDrawingCache();
         Bitmap foto_bm = imgrvProducto.getDrawingCache();
         byte[] fotobytes = ConversorImagenProducto.bitmap_to_bytes_png(foto_bm);
         intent.putExtra(EXTRA_IMAGEN2_PRODUCTO,fotobytes );
         //intent.putExtra(EXTRA_POSICION_CASILLA, posicion);
+
+        fpa.getContexto().startActivity(intent);
+        ((MainScreenApp)fpa.getContexto()).finish();
 
     }
 }

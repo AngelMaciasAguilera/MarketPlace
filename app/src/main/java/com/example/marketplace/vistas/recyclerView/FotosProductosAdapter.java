@@ -15,24 +15,21 @@ import com.example.marketplace.modelos.Producto;
 
 import java.util.ArrayList;
 
-public class FotosProductosAdapter extends RecyclerView.Adapter<RvProductosHolder>{
+public class FotosProductosAdapter extends RecyclerView.Adapter<RvProductosHolder> {
     private Context contexto;
-    private ArrayList<Producto> productosOld;
-    private ArrayList<Producto>productosNew;
-
+    private ArrayList<Producto> productos;
     private LayoutInflater inflate;
 
     private ControladorImagenProducto cip;
 
-    public FotosProductosAdapter(Context contexto, ArrayList<Producto> productosOld)
-    {
+    public FotosProductosAdapter(Context contexto, ArrayList<Producto> productos) {
         this.contexto = contexto;
-        this.productosOld = productosOld;
-        inflate =  LayoutInflater.from(this.contexto);
+        this.productos = productos;
+        inflate = LayoutInflater.from(this.contexto);
         cip = new ControladorImagenProducto();
-
-
     }
+
+
 
 
     public Context getContexto() {
@@ -43,12 +40,12 @@ public class FotosProductosAdapter extends RecyclerView.Adapter<RvProductosHolde
         this.contexto = contexto;
     }
 
-    public ArrayList<Producto> getProductosOld() {
-        return productosOld;
+    public ArrayList<Producto> getProductos() {
+        return productos;
     }
 
-    public void setProductosOld(ArrayList<Producto> productosOld) {
-        this.productosOld = productosOld;
+    public void setProductos(ArrayList<Producto> productos) {
+        this.productos = productos;
     }
 
     public LayoutInflater getInflate() {
@@ -62,24 +59,24 @@ public class FotosProductosAdapter extends RecyclerView.Adapter<RvProductosHolde
     @NonNull
     @Override
     public RvProductosHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View productoView = inflate.inflate(R.layout.item_rv_producto,parent,false);
+        View productoView = inflate.inflate(R.layout.item_rv_producto, parent, false);
         RvProductosHolder rph = new RvProductosHolder(productoView, this);
         return rph;
     }
 
     @Override
     public void onBindViewHolder(@NonNull RvProductosHolder holder, int position) {
-        Producto p = this.getProductosOld().get(position);
+        Producto p = this.getProductos().get(position);
         //----------------------------------------------------------------------
-        holder.getTvwNombreProducto().setText("Nombre del producto: " + p.getNombre());
-        holder.getTvwPrecioProducto().setText("Precio del producto: " + String.valueOf(p.getPrecio()));
+        holder.getTvwNombreProducto().setText("Nombre: " + p.getNombre());
+        holder.getTvwPrecioProducto().setText("Precio: " + String.valueOf(p.getPrecio()));
         //---------------------------------------------------------------------
         ImageView mi_imagen = holder.getImgrvProducto();
-        cip.descargarImagen(p.getId(),p.getNombre(), mi_imagen);
+        cip.descargarImagen(p.getId(), p.getNombre(), mi_imagen);
     }
 
     @Override
     public int getItemCount() {
-        return this.productosOld.size();
+        return this.productos.size();
     }
 }

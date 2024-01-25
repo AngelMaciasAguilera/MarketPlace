@@ -3000,6 +3000,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable buscar
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -3235,7 +3236,11 @@ id btBackAdition
 id btCancel
 id btCancelLogin
 id btCerrarSesion
+id btChangeImage
 id btLogIn
+id btManagementCancelled
+id btManagementDelete
+id btManagementUpdate
 id btSingConfirm
 id btSingIn
 id button4
@@ -3317,9 +3322,13 @@ id edit_query
 id edtAddId
 id edtAddNombre
 id edtAddPrecio
+id edtBuscarProducto
 id edtEmail
 id edtLoginEmail
 id edtLoginPassword
+id edtM_NombreProducto
+id edtM_PrecioProducto
+id edtM_idProducto
 id edtNombre
 id edtPassword
 id edtPasswordConfirm
@@ -3371,6 +3380,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imgMProducto
 id imgrvProducto
 id imgvwProducto
 id immediateStop
@@ -3584,7 +3594,6 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
-id sv_Buscador
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -3778,6 +3787,7 @@ layout activity_adition_screen
 layout activity_login_screen
 layout activity_main_screen
 layout activity_main_screen_app
+layout activity_management_product_screen
 layout activity_sing_in_screen
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row

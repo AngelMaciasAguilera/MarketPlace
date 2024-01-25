@@ -106,7 +106,7 @@ public class ControladorImagenProducto {
 
     //--------------------------------------------------------------------------------
     public void borrarFoto(String idProducto, String nombreProducto) {
-        StorageReference islandRef = storageRef.child(user.getEmail()+"/"+idProducto+"/"+ nombreProducto+".png");
+        StorageReference islandRef = storageRef.child(email+"/"+idProducto+"/"+ nombreProducto+".png");
         // Delete the file
         islandRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override

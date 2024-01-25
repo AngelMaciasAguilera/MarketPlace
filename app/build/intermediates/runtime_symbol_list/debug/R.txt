@@ -2999,6 +2999,7 @@ int drawable btn_radio_off_mtrl 0x7f07007e
 int drawable btn_radio_off_to_on_mtrl_animation 0x7f07007f
 int drawable btn_radio_on_mtrl 0x7f070080
 int drawable btn_radio_on_to_off_mtrl_animation 0x7f070081
+int drawable buscar 0x7f0700fb
 int drawable common_full_open_on_phone 0x7f070082
 int drawable common_google_signin_btn_icon_dark 0x7f070083
 int drawable common_google_signin_btn_icon_dark_focused 0x7f070084
@@ -3234,7 +3235,11 @@ int id btBackAdition 0x7f08020e
 int id btCancel 0x7f080069
 int id btCancelLogin 0x7f080203
 int id btCerrarSesion 0x7f08020f
+int id btChangeImage 0x7f08021d
 int id btLogIn 0x7f080204
+int id btManagementCancelled 0x7f08021e
+int id btManagementDelete 0x7f08021f
+int id btManagementUpdate 0x7f080220
 int id btSingConfirm 0x7f08006a
 int id btSingIn 0x7f08006b
 int id button4 0x7f08006c
@@ -3316,9 +3321,13 @@ int id edit_query 0x7f0800b7
 int id edtAddId 0x7f080210
 int id edtAddNombre 0x7f080211
 int id edtAddPrecio 0x7f080212
+int id edtBuscarProducto 0x7f08021b
 int id edtEmail 0x7f0800b8
 int id edtLoginEmail 0x7f080205
 int id edtLoginPassword 0x7f080206
+int id edtM_NombreProducto 0x7f080221
+int id edtM_PrecioProducto 0x7f080222
+int id edtM_idProducto 0x7f080223
 int id edtNombre 0x7f0800b9
 int id edtPassword 0x7f0800ba
 int id edtPasswordConfirm 0x7f0800bb
@@ -3370,6 +3379,7 @@ int id ifRoom 0x7f0800e7
 int id ignore 0x7f0800e8
 int id ignoreRequest 0x7f0800e9
 int id image 0x7f0800ea
+int id imgMProducto 0x7f080224
 int id imgrvProducto 0x7f080216
 int id imgvwProducto 0x7f080214
 int id immediateStop 0x7f0800eb
@@ -3583,7 +3593,6 @@ int id stretch 0x7f0801b7
 int id submenuarrow 0x7f0801b8
 int id submit_area 0x7f0801b9
 int id supportScrollUp 0x7f0801ba
-int id sv_Buscador 0x7f080219
 int id tabMode 0x7f0801bb
 int id tag_accessibility_actions 0x7f0801bc
 int id tag_accessibility_clickable_spans 0x7f0801bd
@@ -3777,6 +3786,7 @@ int layout activity_adition_screen 0x7f0b006f
 int layout activity_login_screen 0x7f0b001c
 int layout activity_main_screen 0x7f0b001d
 int layout activity_main_screen_app 0x7f0b006e
+int layout activity_management_product_screen 0x7f0b0071
 int layout activity_sing_in_screen 0x7f0b001e
 int layout browser_actions_context_menu_page 0x7f0b001f
 int layout browser_actions_context_menu_row 0x7f0b0020

@@ -4,6 +4,10 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-main-41:\\layout\\activity_main_screen_app.xml"
     },
     {
+        "merged": "com.example.marketplace.app-merged_res-39:/layout_activity_management_product_screen.xml.flat",
+        "source": "com.example.marketplace.app-main-41:/layout/activity_management_product_screen.xml"
+    },
+    {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-merged_res-39:\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-main-41:\\mipmap-hdpi\\ic_launcher.webp"
     },
@@ -26,6 +30,10 @@
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-merged_res-39:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-main-41:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-merged_res-39:\\layout-v31_activity_main_screen_app.xml.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-main-41:\\layout-v31\\activity_main_screen_app.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-merged_res-39:\\layout_activity_login_screen.xml.flat",
@@ -80,8 +88,12 @@
         "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-main-41:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.marketplace.app-merged_res-39:/layout_activity_main_screen_app.xml.flat",
-        "source": "com.example.marketplace.app-main-41:/layout/activity_main_screen_app.xml"
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-merged_res-39:\\drawable_buscar.png.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-main-41:\\drawable\\buscar.png"
+    },
+    {
+        "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-merged_res-39:\\layout_activity_management_product_screen.xml.flat",
+        "source": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-main-41:\\layout\\activity_management_product_screen.xml"
     },
     {
         "merged": "C:\\Users\\Angel\\.gradle\\daemon\\8.0\\com.example.marketplace.app-merged_res-39:\\mipmap-mdpi_ic_launcher.webp.flat",
