@@ -6,13 +6,14 @@
     android:layout_centerHorizontal="true"
     android:layout_gravity="center|top"
     android:layout_marginTop="10dp"
-    android:background="@drawable/fondo2pr">
+    android:background="@drawable/fondo3pr">
 
     <ImageView
         android:id="@+id/imgrvProducto"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
 
     <TextView
         android:id="@+id/precioProducto"
@@ -43,7 +44,8 @@
         android:layout_height="1dp"
         android:layout_below="@id/imgrvProducto"
         android:layout_marginTop="10dp"
-        android:orientation="horizontal" />
+        android:orientation="horizontal"
+        tools:ignore="UselessLeaf" />
 
 
 </RelativeLayout>

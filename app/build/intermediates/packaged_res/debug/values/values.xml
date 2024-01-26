@@ -2,12 +2,44 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <string name="app_name">EManager</string>
+    <string name="addImage">Add Image</string>
+    <string name="addProduct">Add Product</string>
+    <string name="app_name">MarketPlace</string>
+    <string name="btCancelLogin">Cancel</string>
+    <string name="btCancelSI">Cancel</string>
+    <string name="btCancelUpdating">Cancel</string>
+    <string name="btCerrarSesion">Cerrar Sesion</string>
+    <string name="btChangeUpdateImage">Change image</string>
+    <string name="btDelete">Delete</string>
+    <string name="btLogIn">Log In</string>
+    <string name="btLogInLI">Log in</string>
+    <string name="btSignIn">Sign in</string>
+    <string name="btUpdate">Update</string>
+    <string name="cancelAdition">Cancel</string>
+    <string name="edtBuscarProducto">Buscar producto</string>
+    <string name="edtConfirmPassSI">Introduce tu contraseña de nuevo</string>
+    <string name="edtEmailLogin">Introduce tu correo</string>
+    <string name="edtEmailSI">Introduce tu email</string>
+    <string name="edtNombreSI">Introduce tu nombre</string>
+    <string name="edtPasswordSI">Introduce una contraseña</string>
+    <string name="edtSignInSI">Sign in</string>
+    <string name="edtUpdateNombreProducto">nombre del producto</string>
+    <string name="edtUpdatePrecioProducto">precio del producto</string>
+    <string name="edtUpdateProducto">id del producto</string>
     <string name="gcm_defaultSenderId" translatable="false">434111106866</string>
     <string name="google_api_key" translatable="false">AIzaSyB5DRzSIf-rrdUkIhzYd_APvg5Le5xf5zU</string>
     <string name="google_app_id" translatable="false">1:434111106866:android:1a5fe9a03672c61ccdd12b</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB5DRzSIf-rrdUkIhzYd_APvg5Le5xf5zU</string>
     <string name="google_storage_bucket" translatable="false">marketplace-9d98e.appspot.com</string>
+    <string name="hintAddId">Introduzca el identificador</string>
+    <string name="hintAddNombre">Introduzca el nombre</string>
+    <string name="hintAddPrecio">Introduzca el precio</string>
+    <string name="hintLoginPassword">Introduce tu contraseña</string>
+    <string name="imagen_producto">imagen añadida o por añadir al producto\n</string>
+    <string name="imgvwAddProducto">Imagen del producto</string>
+    <string name="imgvwIdAddProducto">Id del producto</string>
+    <string name="imgvwNombreProducto">Nombre del producto</string>
+    <string name="imgvwPrecioAddProducto">Precio del producto</string>
     <string name="project_id" translatable="false">marketplace-9d98e</string>
     <style name="Base.Theme.MarketPlace" parent="Theme.Material3.DayNight.NoActionBar">
         
